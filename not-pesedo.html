@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hover and not Pseudo element</title>
+</head>
+<style>
+    h1 {
+        color: #605dff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+        display: flex;
+        gap: 1rem;
+    }
+    .box {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        background-color: #605dff;
+        transition: opacity 0.6s ease;
+    }
+
+    .container:hover > :not(:hover) {
+        opacity: .5;
+    }
+</style>
+<body>
+
+    <h1>Hover And Not Pseudo classes</h1>
+<div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>
